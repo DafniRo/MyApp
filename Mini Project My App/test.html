@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>PDF to Excel Converter</title>
+</head>
+<style> 
+    #smile {
+            background-image: url("https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_1280.jpg"); /*adding a background image*/
+            background-size: cover; /*stretching the image to the size of the cover*/
+    }
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 30%;
+      left: 40%;
+      -ms-transform: translate(-70%, -30%);
+      transform: translate(-60%, -40%);
+    }
+    .butt {
+      margin: 0;
+      position: absolute;
+      top: 60%;
+      left: 30%;
+      -ms-transform: translate(-40%, -60%);
+      transform: translate(-70%, -30%); 
+    }
+    input {
+        color: #050505;
+        font-size: 20px;
+        font-family: 'Times New Roman';
+        height:70px;
+        width:250px;
+    }
+    </style> 
+<body id="smile">
+    <div class="center">
+        <p style="font-size: 90px; color: whitesmoke; font-family: 'Times New Roman', Times, serif;">
+            PDF to Excel Converter
+        </p>
+    </div>
+    <form action="/upload" method="post" enctype="multipart/form-data" class="butt">
+        <input type="file" name="file">
+        <input type="submit" value="Convert and Download Excel file">
+    </form>
+</body>
+</html>
+

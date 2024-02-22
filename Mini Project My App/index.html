@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#smile {
+        background-image: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/workspace-1280538_640.jpg"); /*adding a background image*/
+        background-size: cover; /*stretching the image to the size of the cover*/
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  -ms-transform: translate(-80%, -20%);
+  transform: translate(-60%, -40%);
+}
+.butt {
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  -ms-transform: translate(-40%, -60%);
+  transform: translate(-0%, -30%); 
+}
+button {
+    background-color: white;
+    border: .5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    color: #000000;
+    padding: 8px;
+    font-size: 35px;
+    font-family: 'Times New Roman';
+    height:100px;
+    width:250px;
+}
+</style> 
+</head>
+<body id="smile">
+    <div class="center">
+        <p style="font-size: 90px; color: whitesmoke; font-family: 'Times New Roman', Times, serif;">
+                Basic HTML Page for your potential APP
+        </p>
+    </div>
+    <div class="butt">
+        <button type='button' id ='retrieve'>Click for a surprise</button>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+       $('#retrieve').click(function(){
+           $.ajax({
+           url: "{{https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_1280.jpg}}",
+           type: "GET",
+           success: function(response) {
+               $("#myimg").attr('src', '/static/' + response);
+          },
+          error: function(xhr) {
+            //Do Something to handle error
+         }
+         });
+       });
+    });
+  </script>
+</html>

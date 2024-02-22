@@ -1,0 +1,13 @@
+.vscode
+.databricks
+# .env
+env/
+**/__pycache__/
+Mini Project NLP on Columns/
+Mini Project PDF to Excel/
+Project Databricks/
+Project Mantis_AON/
+Project Pricing Data/
+Project Reconciliation/
+Terminated Projects/
+Z_Lifehacks/
